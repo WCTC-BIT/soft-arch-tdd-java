@@ -31,7 +31,8 @@ public class Game {
             if (isSpare(currentRoll)) {
                 score += 10 + rolls[currentRoll + 2];
                 currentRoll += 2;
-            } else if (rolls[currentRoll] == 10) { // strike (ugly comment)
+//            } else if (rolls[currentRoll] == 10) { // strike (ugly comment)
+            } else if (isStrike(currentRoll)) {
                 score += 10 + rolls[currentRoll + 1] + rolls[currentRoll + 2];
                 currentRoll += 1;
             } else {
@@ -41,6 +42,10 @@ public class Game {
         }
 
         return score;
+    }
+
+    private boolean isStrike(int currentRoll) {
+        return rolls[currentRoll] == 10;
     }
 
     private boolean isSpare(int currentRoll) {

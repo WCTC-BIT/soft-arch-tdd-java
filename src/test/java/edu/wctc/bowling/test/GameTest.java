@@ -73,4 +73,11 @@ public class GameTest {
 
         assertEquals(24, g.score());
     }
+
+    @Test
+    void allStrikes() {
+        rollMany(12, 10);
+
+        assertEquals(300, g.score());
+    }
 }
