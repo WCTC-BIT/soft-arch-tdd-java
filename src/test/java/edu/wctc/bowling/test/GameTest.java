@@ -64,4 +64,13 @@ public class GameTest {
         assertEquals(16, g.score());
     }
 
+    @Test
+    void oneStrike() {
+        g.roll(10); // strike (ugly comment)
+        g.roll(3);
+        g.roll(4);
+        rollMany(16, 0);
+
+        assertEquals(24, g.score());
+    }
 }

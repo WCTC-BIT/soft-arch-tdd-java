@@ -27,9 +27,13 @@ public class Game {
 
         int currentRoll = 0;
         for (int frame = 0; frame < 10; frame++) {
-            if (rolls[currentRoll] + rolls[currentRoll+1] == 10) { // spare (ugly comment)
+//            if (rolls[currentRoll] + rolls[currentRoll+1] == 10) { // spare (ugly comment)
+            if (isSpare(currentRoll)) {
                 score += 10 + rolls[currentRoll + 2];
                 currentRoll += 2;
+            } else if (rolls[currentRoll] == 10) { // strike (ugly comment)
+                score += 10 + rolls[currentRoll + 1] + rolls[currentRoll + 2];
+                currentRoll += 1;
             } else {
                 score += rolls[currentRoll] + rolls[currentRoll + 1];
                 currentRoll += 2;
@@ -37,5 +41,9 @@ public class Game {
         }
 
         return score;
+    }
+
+    private boolean isSpare(int currentRoll) {
+        return rolls[currentRoll] + rolls[currentRoll+1] == 10;
     }
 }
