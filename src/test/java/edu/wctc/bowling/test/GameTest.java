@@ -28,20 +28,40 @@ public class GameTest {
 
     @Test
     void gutterGame() {
-        for (int i = 0; i < 20; i++) {
-            g.roll(0);
-        }
+//        for (int i = 0; i < 20; i++) {
+//            g.roll(0);
+//        }
+
+        rollMany(20, 0);
 
         assertEquals(0, g.score());
     }
 
     @Test
     void allOnes() {
-        for (int i = 0; i < 20; i++) {
-            g.roll(1);
-        }
+//        for (int i = 0; i < 20; i++) {
+//            g.roll(1);
+//        }
+
+        rollMany(20, 1);
 
         assertEquals(20, g.score());
+    }
+
+    private void rollMany(int balls, int pins) {
+        for (int i = 0; i < balls; i++) {
+            g.roll(pins);
+        }
+    }
+
+    @Test
+    void oneSpare() {
+        g.roll(5);
+        g.roll(5); // spare (ugly comment)
+        g.roll(3);
+        rollMany(17, 0);
+
+        assertEquals(16, g.score());
     }
 
 }
