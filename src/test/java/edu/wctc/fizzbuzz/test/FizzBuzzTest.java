@@ -1,18 +1,10 @@
-package edu.wctc.fizzbuzz.inclass.test;
+package edu.wctc.fizzbuzz.test;
 
 import org.junit.jupiter.api.Test;
 
-import static edu.wctc.fizzbuzz.inclass.FizzBuzz.fizzBuzz;
+import static edu.wctc.fizzbuzz.FizzBuzz.fizzBuzz;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-/*
-https://kata-log.rocks/fizz-buzz-kata
-
-Write a program that prints one line for each number from 1 to 100
-For multiples of three print Fizz instead of the number
-For the multiples of five print Buzz instead of the number
-For numbers which are multiples of both three and five print FizzBuzz instead of the number
- */
 public class FizzBuzzTest {
     @Test
     void one() {

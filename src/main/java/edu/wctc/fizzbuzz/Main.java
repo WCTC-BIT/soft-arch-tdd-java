@@ -1,6 +1,6 @@
-package edu.wctc.fizzbuzz.inclass;
+package edu.wctc.fizzbuzz;
 
-import static edu.wctc.fizzbuzz.inclass.FizzBuzz.fizzBuzz;
+import static edu.wctc.fizzbuzz.FizzBuzz.fizzBuzz;
 
 public class Main {
     public static void main(String[] args) {

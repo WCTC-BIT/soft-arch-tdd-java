@@ -1,4 +1,4 @@
-package edu.wctc.fizzbuzz.inclass;
+package edu.wctc.fizzbuzz;
 
 public class FizzBuzz {
     public static String fizzBuzz(int num) {
