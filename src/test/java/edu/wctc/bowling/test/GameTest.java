@@ -9,4 +9,11 @@ public class GameTest {
         Game g = new Game();
     }
 
+    @Test
+    void canRoll()
+    {
+        Game g = new Game();
+        g.roll(0);
+    }
+
 }
